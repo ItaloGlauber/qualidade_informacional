@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Selos Informacional</title>
+        <link rel="icon"
+                type="image/png"
+                href="img/logo_png.png">
+        <style>
+            img {
+                width: 188px;
+                height: 188px;
+                display: flex;
+                display: -webkit-flex; /* Garante compatibilidade com navegador Safari. */
+                justify-content: center;
+                align-items: center;
+                vertical-align: top;
+                }
+
+            #background {
+                width: 220px;
+                height: 220px;
+                border-color: #50555a;
+                border-width: 1.5px;
+                border-style: solid;
+                border-radius: 42px;
+                text-align: center;
+                vertical-align: middle;
+                border-image: 5px;
+                background-color: #ffff;
+                display: flex;
+                display: -webkit-flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #pop_up{
+                width: 210px;
+                height: 1048px;
+                border-color: #50555a;
+                border-width: 1.5px;
+                border-style: solid;
+                border-radius: 42px;
+                border-image: 5px;
+                background-color: #ffff;
+                display: none;     
+         
+            }
+            #icon{
+                width: 50px;
+                height: 50px;                         
+                text-align: center;
+                vertical-align: middle;
+                border-image: 100px;
+                display: flex;
+                display: -webkit-flex;
+                justify-content: center;
+                align-items: top;
+            }
+        </style>
+        <script type="text/javascript">
+            function abrir () {
+                document.getElementById('pop_up').style.display = 'flex';
+                document.getElementById('icon').style.display = 'none';
+            }
+            function fechar(){
+                document.getElementById('pop_up').style.display = 'none';
+                document.getElementById('icon').style.display = 'flex';
+            }
+        </script>
+    </head>
+    <body>
+        <div id="background">
+            <img src="img/qualidade_nota_10.gif" alt="Avaliacao de Qualidade Nota 10">
+        </div>
+        <div id="icon">
+             <!--Abrir mais detalhes-->
+             <a href="javascript: abrir();"> <p>Ver Detalhes!</p> <!--<img src = "https://github.com/ItaloGlauber/informacional/blob/main/ver%20mais.png?raw=true"></img>-->
+             </a>  
+        </div>                 
+        <div id="pop_up">
+            <img src="https://github.com/ItaloGlauber/informacional/blob/main/Att_lvl_3.gif?raw=true">
+        </div>
+        <div>
+            <img src="https://github.com/ItaloGlauber/informacional/blob/main/doc_lvl_3.gif?raw=true">
+            <img src="https://github.com/ItaloGlauber/informacional/blob/main/fonte_lvl_3.gif?raw=true">
+            <img src="https://github.com/ItaloGlauber/informacional/blob/main/versoes_lvl_3.gif?raw=true">
+            <!--Ocultar detalhes-->
+            <a href="javascript: fechar()">Ocultar Detalhes!
+            </a>
+        </div>            
+    </body>
+</html>
