@@ -35,7 +35,7 @@
                 justify-content: center;
                 align-items: center;
             }
-            #pop_up{
+            #pop_up1{
                 width: 210px;
                 height: 1048px;
                 border-color: #50555a;
@@ -45,29 +45,74 @@
                 border-image: 5px;
                 background-color: #ffff;
                 display: none;     
-         
             }
-            #icon{
-                width: 30px;
-                height: 30px;
-                border-radius: 5px;
-                }
-                @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+            #pop_up2{
+                display: none;     
+            }
+
+            #pop_up3{
+                display: none;     
+            }
+
+            #pop_up4{
+                display: none;     
+            }
+
+            #pop_up5{
+                display: none;     
+            }
+           
             h1 {
                 font-style: normal;
-                font-size: 8pt;
+                font-size: 10pt;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 text-align: center;
+                vertical-align: text-top;
+                color: #50555a;
             }
+
+            .divbtn{
+                margin: 0.5 em;
+            }
+            .btn{
+                width: 220px;
+                height: 30px;
+                text-align: center;
+                vertical-align: middle;
+                background: none;
+                border: dashed  0px #50555a;
+                border-radius: 10px;
+            }
+
+            .botao_abrir{
+                display: none;
+            }
+
+            .botao_fechar{
+                display: none;
+            }
+
+
         </style>
         <script type="text/javascript">
             function abrir () {
-                document.getElementById('pop_up').style.display = 'flex';
-                document.getElementById('icon').style.display = 'none';
+                document.getElementById('pop_up1').style.display = 'flex';
+                document.getElementById('pop_up2').style.display = 'flex';
+                document.getElementById('pop_up3').style.display = 'flex';
+                document.getElementById('pop_up4').style.display = 'flex';
+                document.getElementById('pop_up5').style.display = 'flex';
+                document.getElementById('botao_abrir').style.display = 'none';
+                document.getElementById('botao_fechar').style.display = 'flex';
             }
             function fechar(){
-                document.getElementById('pop_up').style.display = 'none';
-                document.getElementById('icon').style.display = 'flex';
+                document.getElementById('pop_up1').style.display = 'none';
+                document.getElementById('pop_up2').style.display = 'none';
+                document.getElementById('pop_up3').style.display = 'none';
+                document.getElementById('pop_up4').style.display = 'none';
+                document.getElementById('pop_up5').style.display = 'none';
+                document.getElementById('botao_abrir').style.display ='flex';
+                document.getElementById('botao_fechar').style.display = 'none';
             }
         </script>
     </head>
@@ -76,34 +121,33 @@
             <!--Nota Principal-->
             <img src="https://github.com/ItaloGlauber/qualidade_informacional/blob/main/img/qualidade_nota_10.gif?raw=true" alt="Avaliacao de Qualidade">
         </div>
-        <div id="icon">
+        <div id = 'botao_abrir'>
              <!--Abrir mais detalhes-->
-             <a href="javascript: abrir();"> <button><h1> Acessar Avaliação Completa </h1></button>
+             <a href="javascript: abrir();"> <button class="btn"><h1> Acessar Avaliação Completa </h1></button>
                  <!--<img src="https://raw.githubusercontent.com/ItaloGlauber/qualidade_informacional/060fda07d582cbf8a0084e352096374f72a7ca80/img/ver_mais.svg">-->
              </a>  
         </div>                 
-        <div id="pop_up">
-            <div>
+        <div id="pop_up1">
             <!--Atualizacao-->
             <img src="https://github.com/ItaloGlauber/qualidade_informacional/blob/main/img/Att_lvl_3.gif?raw=true">
-            </div>
-            <div>
+        </div>
+        <div id="pop-up2">
             <!--Documentacao-->
             <img src="https://github.com/ItaloGlauber/qualidade_informacional/blob/main/img/doc_lvl_3.gif?raw=true">
-            </div>
-            <div>
+        </div>
+        <div id="pop-up3">
             <!--Fonte do Dado-->
             <img src="https://github.com/ItaloGlauber/qualidade_informacional/blob/main/img/fonte_lvl_3.gif?raw=true">
-            </div>
-            <div>
+        </div>
+        <div id="pop-up4">
             <!--Controle De Versao-->
             <img src="https://github.com/ItaloGlauber/qualidade_informacional/blob/main/img/versoes_lvl_3.gif?raw=true">
-            </div>
-            <div>
+        </div>
+        <div id='botao_fechar'>
             <!--Ocultar detalhes-->
-            <a href="javascript: fechar()"><img src = "https://raw.githubusercontent.com/ItaloGlauber/qualidade_informacional/060fda07d582cbf8a0084e352096374f72a7ca80/img/fechar.svg"></img>
+            <a href="javascript: fechar()"><button class="btn"><h1> Ocultar Detalhes </h1></button><!--<img src = "https://raw.githubusercontent.com/ItaloGlauber/qualidade_informacional/060fda07d582cbf8a0084e352096374f72a7ca80/img/fechar.svg"></img>-->
             </a>
-            </div>
+        </div>
         </div>            
     </body>
 </html>
